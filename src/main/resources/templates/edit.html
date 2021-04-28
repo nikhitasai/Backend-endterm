@@ -1,0 +1,27 @@
+<html xmlns:th="http://thymeleaf.org">
+
+<body>
+<h1>Edit Your Details</h1>
+
+<form th:method="put" th:object="${detail}" th:action="@{/editDetail(detailId=${detail.id})}">
+        <div>NAME:</div>
+        <div><input type="text" id="name" name="name" th:value="${detail.name}"/></div>
+    <br>
+        <div>AGE:</div>
+        <div><input type="number" name="age" id="age" th:value="${detail.age}"/></div>
+    <br>
+
+        <div>MOBILE NUMBER:</div>
+        <div><input type="text" id="mobile" name="mobile" th:value="${detail.mobile}"/></div>
+    <br>
+        <div>EMAIL:</div>
+        <div><input type="text" id="email" name="email" th:value="${detail.email}"/></div>
+    <br>
+        <div>ADDRESS:</div>
+        <div><input type="text" id="address" name="address" th:value="${detail.address}"/></div>
+        <input type="submit" value="Submit" />
+    </div>
+</form>
+
+</body>
+</html>
